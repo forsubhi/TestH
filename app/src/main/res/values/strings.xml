@@ -5,6 +5,9 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="facebook_app_id">748760135172603</string>
+    <string name="needResidence">I Need Residence</string>
+    <string name="canHelp">I Can Help</string>
+    <string name="publishAdd">I Have Residence</string>
 
 
 </resources>
