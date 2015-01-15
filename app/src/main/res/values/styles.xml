@@ -1,19 +1,26 @@
 <resources>
-
+    <style name="AppTheme" parent="AppBaseTheme">
+    </style>
     <!-- Base application theme. -->
-    <style name="AppBaseTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+    <style name="AppBaseTheme" >
         <!-- Customize your theme here. -->
         <item name="android:buttonStyle">
             @style/buttonStyle
+        </item>
+        <item name="android:spinnerStyle">
+            @style/spinnerStyle
+        </item>
+        <item name="android:editTextStyle">
+            @style/TextBoxStyle
         </item>
     </style>
 
     <style name="buttonStyle" parent="android:Widget.Button">
         <item name="android:background">
-            @drawable/rounded_green_rectangle
+            @drawable/rounded_blue_rect
         </item>
         <item name="android:textColor">
-            #ffffaa
+            #ffffff
         </item>
         <item name="android:shadowColor">
             #99ff22
@@ -27,6 +34,18 @@
         <item name="android:padding">
             10dp
         </item>
+    </style>
+
+    <style name="TextBoxStyle" parent="android:Widget.EditText">
+        <item name="android:background">
+            @drawable/text_box_bg
+        </item>
+        <item name="android:layout_marginLeft">30dp</item>
+        <item name="android:layout_marginRight">30dp</item>
+    </style>
+
+    <style name="spinnerStyle" parent="android:Widget.Spinner">
+
     </style>
 
 

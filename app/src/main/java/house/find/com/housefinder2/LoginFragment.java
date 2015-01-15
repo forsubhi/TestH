@@ -121,11 +121,15 @@ public class LoginFragment extends Fragment {
                             RestClientS restClientS = new RestClientS(ImonaCloudServices.registerService,personStr);
                             String resp = restClientS.CallService();
                             resp.toString();
+
                         }
                     });
-
+                    HomeScreenFragment homeScreen = new HomeScreenFragment();
+                    getActivity().getSupportFragmentManager()
+                            .beginTransaction()
+                            .replace(android.R.id.content, homeScreen)
+                            .commit();
                     thread.start();
-
 
                 }
             }
