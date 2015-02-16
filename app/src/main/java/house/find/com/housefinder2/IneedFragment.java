@@ -25,13 +25,25 @@ public class IneedFragment extends Fragment {
     City[] cities;
     private ArrayList<City> tops = new ArrayList<>();
     private Spinner citiesSpinner;
+    private ArrayList<City> provsList = new ArrayList<>();
+    private ArrayList<City> citiesList =new ArrayList<>();
+    private Spinner provsSpinner;
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.i_need_layout,null);
         loadCities();
+        for(City c:cities)
+        {
+            if(c.city.equals(c.province))
+                citiesList.add(c);
+            else
+                provsList.add(c);
+        }
         citiesSpinner = (Spinner) v.findViewById(R.id.cities);
-        citiesSpinner.setAdapter(new ArrayAdapter<City>(getActivity(),android.R.layout.simple_spinner_item,cities));
+        citiesSpinner.setAdapter(new ArrayAdapter<City>(getActivity(),android.R.layout.simple_spinner_item,citiesList));
+        provsSpinner = (Spinner) v.findViewById(R.id.provs);
+        provsSpinner.setAdapter(new ArrayAdapter<City>(getActivity(),android.R.layout.simple_spinner_item,provsList));
         return v;
     }
     void loadCities()

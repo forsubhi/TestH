@@ -35,7 +35,7 @@ public class HomeScreenFragment extends Fragment{
     private void openINeed() {
         getActivity().getSupportFragmentManager()
                 .beginTransaction()
-                .replace(android.R.id.content, new IneedFragment())
+                .replace(android.R.id.content, new MapLayout())
                 .commit();
     }
 }

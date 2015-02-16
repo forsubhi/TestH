@@ -116,7 +116,7 @@ public class LoginFragment extends Fragment {
                             p.setLast_name(user.getLastName());
 
                             Gson gson = new Gson();
-                            String personStr = gson.toJson(p);
+                            String personStr = gson.toJson( p);
 
                             RestClientS restClientS = new RestClientS(ImonaCloudServices.registerService,personStr);
                             String resp = restClientS.CallService();
